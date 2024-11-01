@@ -214,7 +214,7 @@
           <small>Slug is random id.</small>
         </div>
       </details>
-      <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">Shorten</button>
+      <button :class="{ loading }" :disabled="loading " @click="submit($refs, $nextTick)">Shorten</button>
     </main>
     <footer>
      
@@ -234,10 +234,7 @@
             this.alert = { type: 'error', message: 'No url, Input first' }
             return
           }
-          if (1) {
-            this.alert = { type: 'error', message: 'Illegal url' }
-            return
-          }
+
 
           this.alert = null
           this.loading = true
