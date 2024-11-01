@@ -227,7 +227,7 @@
         alert: null,
         loading: false,
         isValidated () {
-          return !/^https?:\/\/.{3,}/.test(this.url)
+          return true
         },
         submit ($refs, $nextTick) {
           if (!this.url) {
