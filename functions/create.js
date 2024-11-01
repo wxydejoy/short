@@ -55,7 +55,7 @@ export async function onRequest(context) {
     if (!url) return Response.json({ message: 'Missing required parameter: url.' });
 
     // url格式检查
-    if (1) {
+    if (0) {
         return Response.json({ message: 'Illegal format: url.' },{
             headers: corsHeaders,
             status: 400
