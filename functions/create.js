@@ -55,12 +55,12 @@ export async function onRequest(context) {
     if (!url) return Response.json({ message: 'Missing required parameter: url.' });
 
     // url格式检查
-    if (0) {
-        return Response.json({ message: 'Illegal format: url.' },{
-            headers: corsHeaders,
-            status: 400
-        })
-    }
+    // if (0) {
+    //     return Response.json({ message: 'Illegal format: url.' },{
+    //         headers: corsHeaders,
+    //         status: 400
+    //     })
+    // }
 
     // 自定义slug长度检查 2<slug<10 是否不以文件后缀结尾
     if (slug && (slug.length < 2 || slug.length > 10 || /.+\.[a-zA-Z]+$/.test(slug))) {
@@ -129,7 +129,7 @@ export async function onRequest(context) {
             status: 200
         })
     } catch (e) {
-        // console.log(e);
+        console.log(e);
         return Response.json({ message: e.message },{
             headers: corsHeaders,
             status: 500
